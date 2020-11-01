@@ -87,10 +87,9 @@ deploy:
 
 # backup
 backup:
-  type: git
-  message: Back up my www.itrhx.com blog
-  repository:
-    github: git@github.com:protons-z/protons-z.git,backup
+    type: git
+    repository:
+       github: git@github.com:protons-z/protons-z.git,backup  
     # coding: https://git.coding.net/hojun/hojun.git,backup
 
 #RSS
