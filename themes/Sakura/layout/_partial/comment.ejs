@@ -1,0 +1,16 @@
+<% if (theme.valine && post.comments) { %>
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function(){
+        var valine = new Valine();
+        valine.init({
+          el: '#vcomments',
+          appId: "<%= theme.v_appId %>",
+          appKey: "<%= theme.v_appKey %>",
+          visitor: true,
+          path: window.location.pathname,
+          placeholder: "君指先跃动の光は、私の一生不変の信仰に、唯私の超电磁炮永生き！"
+        })
+    }
+  </script>
+  <% } %>

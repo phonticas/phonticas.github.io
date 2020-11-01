@@ -1,0 +1,77 @@
+# site name
+prefixName: Protons'
+siteName: blogs
+# favicon and site master avatar
+favicon: /images/Atom.ico
+avatar:  /images/profile/head.jpg
+url: 
+description: 山有木兮木有枝 心悦君兮君不知
+cdn: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0
+pjax: 1
+fancybox: true
+# 1开启
+mathjax: true
+
+notice: 博客正在完善~
+lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+
+menus:
+  首页: { path: /, fa: zkq zkq-fort faa-shake }
+  归档: { path: /archives, fa: zkq zkq-file faa-shake, submenus: { 
+    题解: {path: /categories/题解/, fa: zkq zkq-code }, 
+    笔记: {path: /categories/笔记/, fa: zkq zkq-note },
+    游记: {path: /categories/游记/, fa: zkq zkq-trip }
+  } }
+  标签: {path: /tags , fa: zkq zkq-tag faa-vertical}
+  关于: {path: /about , fa: zkq zkq-about faa-pulse}
+  留言: {path: /comment , fa: zkq zkq-comment faa-spin}
+  友链: {path: /links , fa: zkq zkq-youlian}
+
+# Home page sort type: -1: newer first，1: older first.
+homePageSortType: -1
+# Home page article shown number)
+homeArticleShown: 10
+# 背景图片 更好的修改
+bg:
+  - https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/img/84618.jpg
+
+# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass:  filter-dot
+
+# startdash url, title, desc img
+# startdash url, title, desc img
+startdash: 
+  - {url: /2020/03/04/Protons知晓的定理, title: Protons知晓的定理, desc: 定理一定要记住哦, img: /images/cover1/bajbytecomputer.jpg}
+
+
+# your site build time or founded date
+siteBuildingTime: 03/03/2020
+archivesimg: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/cover/13.jpg
+
+#social  url, img PC端配置
+social:
+  github: {url: http://github.com/protons-z, img: /images/social/github.png}
+  wangyiyun: {url: https://music.163.com/#/user/home?id=1740061187, img: /images/social/wangyiyun.png}
+  luogu: {url: https://www.luogu.com.cn/user/184069, img: /images/social/luogu.jpg}
+  qq: {url: https://user.qzone.qq.com/2048455641, img: /images/social/qzone.png}
+
+
+donate:
+  #paypal: #https://www.paypal.me/hojuncn
+  alipay: #/img/custom/donate/AliPayQR.jpg
+  wechat: #/img/custom/donate/WeChanQR.jpg
+  #wechatSQ: # /img/custom/donate/WeChanSQ.jpg
+
+# 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
+movies:
+  url: #https://cdn.jsdelivr.net/gh/honjun/hojun@1.2
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: #Unbroken.mp4
+
+
+
+# Valine
+valine: true
+v_appId: UD9Fgf0gUD8RmiueUxNfhiO6-gzGzoHsz
+v_appKey: KK3UceJXwviLvXimdcQ3RBJW
+

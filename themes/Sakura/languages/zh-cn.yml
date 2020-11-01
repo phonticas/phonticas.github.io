@@ -1,0 +1,67 @@
+home: 首页
+archives: 文章归档
+about: 关于作者
+categories: 分类
+series: 系列文章
+search: 搜索
+searchPlaceHolder: 请输入关键字
+tags: 标签
+tagcloud: 标签云
+video: 视频资源
+help: 关于本站
+links: 友情链接
+photo: 图集
+book: 悦读
+music: 音乐
+cloud: 资源
+prev: <i class="iconfont icon-back"></i>
+next: <i class="iconfont icon-right"></i>
+comment: 留言
+page: 第 %d 页
+recent_posts: 最新文章
+newer: 上一篇
+older: 下一篇
+share: 分享
+theme_by: Theme by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+connect: '联系我们'
+post_total_count: 嗯，目前共计%d篇文章
+read_more: '阅读全文'
+contents: 文章目录
+
+none: 无
+insight:
+    hint: '请输入关键词...'
+    posts: '文章'
+    pages: '页面'
+    categories: '分类'
+    tags: '标签'
+    about: '关于'
+    untitled: '(无标题)'
+archive_a: 归档
+#category
+题解:
+    zh: 题解
+    en: Solutions
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/images/cover/13.jpg
+笔记:
+    zh: 笔记
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/images/cover/13.jpg
+游记:
+    zh: 游记
+    en: Journey
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/images/cover/13.jpg
+#tag
+标签:
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/images/cover/12.jpg
+多项式:
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/img/6.jpg
+组合数学:
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.4/images/cover/14.jpg
+拉格朗日插值:
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.5/images/cover/37.jpg
+学习:
+    img: https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.6/img/42493_2.jpg
+    
