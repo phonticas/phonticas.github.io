@@ -88,10 +88,10 @@ deploy:
 # backup
 backup:
   type: git
-  message: backup my blog of https://yourname.github.io/
+  theme: Sakura
+  message: Back up my www.itrhx.com blog
   repository:
-    github:github: git@github.com:protons-z/protons-z.github.io.git,backup
-           
+    github: git@github.com:protons-z/protons-z.github.io.git,backup
     # coding: https://git.coding.net/hojun/hojun.git,backup
 
 #RSS
