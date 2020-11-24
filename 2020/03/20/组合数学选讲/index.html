@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">RE:从零开始自闭的组合数学选讲 | protons-z</title>
+  
+    <link rel="shortcut icon" href="/images/Atom.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ctz45562/cdn@1.4.1/css/googlefont.css" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ctz45562/cdn@1.4.1/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1749844_ulo426edlvl.css">
+  <style>
+    .emoji-coda {
+        display: inline-block !important;
+        position: relative;
+        width: 45px;
+        top: 2px;
+        margin: -3px 3px !important;
+        padding: 0;
+    }
+  </style>
+  
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "Protons'blogs";
+  mashiro_option.author_name = "blogs";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "UD9Fgf0gUD8RmiueUxNfhiO6-gzGzoHsz";
+  mashiro_option.v_appKey = "KK3UceJXwviLvXimdcQ3RBJW";
+  mashiro_option.mathjax = "true";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/img/84618.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:DarkOrchid}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:DarkOrchid}::-webkit-scrollbar-thumb{background:DarkOrchid}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:DarkOrchid}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:DarkOrchid}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/profile/head.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>山有木兮木有枝 心悦君兮君不知</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/protons-z" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=1740061187" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.luogu.com.cn/user/184069" target="_blank" class="social-github" title="luogu">
+                    <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/social/luogu.jpg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://user.qzone.qq.com/2048455641" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/social/qzone.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Protons&#39;</span>
+            <span class="shironeko">blogs</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-fort faa-shake"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-file faa-shake"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/题解/">
+                          <i class="zkq zkq-code"></i>
+                          题解
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/笔记/">
+                          <i class="zkq zkq-note"></i>
+                          笔记
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/游记/">
+                          <i class="zkq zkq-trip"></i>
+                          游记
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-tag faa-vertical"></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-about faa-pulse"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-comment faa-spin"></i>
+                    留言
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links">
+                  <span class="faa-parent animated-hover">
+                    <i class="zkq zkq-youlian"></i>
+                    友链
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <script>
+  function imgInit(){
+      var imgs=document.getElementsByClassName('entry-content').item(0).getElementsByTagName('img'),dsrc=record.getAttribute("data-src");
+      for(var i=0;i<imgs.length;++i){
+          var element = document.createElement("a"),record=imgs[i];
+          element.setAttribute("data-fancybox","gallery");
+          element.setAttribute("href",dsrc||imgs[i].src);
+          imgs[i].parentNode.appendChild(element);
+          imgs[i].parentNode.removeChild(imgs[i]);
+          element.appendChild(record);
+      }
+  }
+  imgInit();
+</script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/tocbot/4.8.0/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/cover1/1.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/cover1/1.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      RE:从零开始自闭的组合数学选讲</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/profile/head.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Protons</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-20<span class="bull">
+        ·</span>
+        <span id='/2020/03/20/组合数学选讲/' class="leancloud-visitors" data-flag-title="RE:从零开始自闭的组合数学选讲"><a class="leancloud-visitors-count">1000000</a><a class="post-meta-item-text"> 次阅读</a></span>
+      
+        
+          <div>
+            <ul class="spfk-ul">
+              &nbsp<i class="fa fa-tag" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbsp
+              <li class="spfk-li"><a href="/tags/组合数学/" class="butterfly-tags">组合数学</a></li>
+            </ul>
+          </div>
+          <script>
+              function colorInit(c,num){for(var i=1;i<=num;++i)c.push(i+'');}
+              function paintTags(){
+                  var colorNumber=8,tagColors=[],tags=document.getElementsByClassName('butterfly-tags');
+                  for(var i = 0 ; i < tags.length ; ++i){
+                      if(!tagColors.length)colorInit(tagColors,colorNumber);
+                      var j=Math.floor(Math.random()*tagColors.length);
+                      tags[i].classList.add("spfk-color"+tagColors[j]);
+                      tagColors.splice(j,1);
+                  }
+              }
+              paintTags()
+          </script>
+      
+  
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="gather toc" style="width:230px"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>或许是我讲的最详细的一次吧。</p>
+<h4 id="前置姿势"><a href="#前置姿势" class="headerlink" title="前置姿势"></a>前置姿势</h4><p>一大堆呀，挑主要的整理一些</p>
+<ol>
+<li>基本概念，若$a\times b \equiv 1\pmod p$ 则称$b$为$a\pmod p$ 意义下的逆元，记作$a^{-1}$</li>
+<li>逆元存在定理，存在$a$在$\pmod p$意义下的逆元$\iff (a,p)=1$</li>
+<li>逆元性质，满足几乎所有分式性质，例如在$\pmod p$意义下$a^{-1}\times b^{-1}\equiv(a\times b)^{-1}\pmod p$,$a\times a^{-1}\equiv 1\pmod p$</li>
+<li>线性求逆元$i^{-1}\equiv (p-p/i) \times(p\% i)^{-1}\pmod p$ why?<br>证明：设$p=a\times i+b$ ($0\leq$ $b&lt; i$)<br>$a\times i+b=p$<br>$a\times i+b\equiv 0 \pmod p$<br>$-a\times i\equiv b \pmod p$<br>$-a\times b^{-1}\equiv  i^{-1} \pmod p$<br>$i^{-1} \equiv (p-a)\times b^{-1} \pmod p$<br>也就是$(p\% i)^{-1}\pmod p$$Q.E.D$</li>
+<li>组合数定义$C^{m}<em>{n}=\frac{n!}{m!\times (n-m)!}$补充定义，若$m&gt;n$时$C^{m}</em>{n}=0$</li>
+<li>组合数的一堆性质$C<em>{n}^{m}=C</em>{n}^{n-m}$, $C<em>{n}^{m}=C</em>{n-1}^{m-1}+C_{n-1}^{m}$</li>
+<li>二项式定理$(1+x)^k=\sum^{k}<em>{i=0}C</em>{k}^{i}x^i$</li>
+<li>卢卡斯定理，若p为质数$C<em>{n}^{m}\equiv C</em>{n\%p}^{m\%p}\times C<em>{n/p}^{m/p}\pmod p$<br>引理：若$p$为质数$(1+x)^p\equiv 1+x^p \pmod p$<br>引理证明：因为p为质数，所以当$2\leq$ $k&lt; n$时$p\mid C</em>{p}^{k}$所以引理成立<br>设$n=a\times p+b,m=c\times p+d$($0\leq$ $b&lt; p$ , $0\leq$ $d&lt; p$)<br>$(1+x)^n=\sum <em>{i=0}^{n}C</em>{n}^{i}\times x^i$<br>$(1+x)^n=(1+x)^{a\times p+b}=((1+x)^p)^a\times (1+x)^b\equiv (1+x^p)^a\times (1+x)^b\equiv\sum<em>{i=0}^{a}C</em>{a}^{i}x^{p\times i}\times\sum<em>{i=0}^{b}C</em>{b}^{i}x^i \pmod p$<br>而$C<em>{n}^{m}$代表的是$x^m$的系数，我们发现只能是第一个式子中$C</em>{a}^{c}\times x^{p\times c}$第二个式子中的$C<em>{b}^{d}\times x^d$<br>故系数为$C</em>{a}^{c}\times C<em>{b}^{d}=C</em>{n}^{m}$<br>也就是说$C<em>{n}^{m}=C</em>{n\%p}^{m\%p}\times C_{n/p}^{m/p}$</li>
+<li>$Ex lucas$:不保证$p$是质数，求$C<em>{n}^{m}\%p$<br>可以将$p$分成质数次幂<br>$p=\prod</em>{i=1}p<em>i^{\alpha_i}$，我们似乎可以合并<br>但不幸的是，我 <a href><sup>TM</sup></a>并未保证$\forall i,\alpha_i=1$所以还不是质数，无法做。<br>我们只能换而求$C</em>{n}^{m}\%p<em>i^{\alpha_i}$<br>怎么办呢？发现$a$对$p$有逆元的充要条件为<br>$gcd(a,p)=1$<br>$\displaystyle C</em>{n}^{m}\%P^{k}=\displaystyle\frac {\displaystyle\frac {n!}{P^{x}}}{\displaystyle\frac {m!}{P^{y}}\displaystyle\frac {(n-m)!}{P^{z}}}P^{x-y-z}\bmod{P^k}$<br>记$f(n)=\frac {n!}{P^{x}}$<br>$f(n)=f(\lfloor\frac{n}{P}\rfloor)\times(\displaystyle\prod<em>{i=1,P\displaystyle\nmid i}^{P^k}i)^{\displaystyle\lfloor\frac{n}{P^k}\rfloor}\times \displaystyle\prod</em>{i=\displaystyle\lfloor\frac{n}{P^k}\rfloor\times P^k,P\displaystyle\nmid i}^{n}i$</li>
+</ol>
+<p>然后怎么求其中的$x,y,z$什么的呢<br>用$g(n)$代表$n!$里面有多少个$P$的因子<br>$g(n)=\lfloor \frac nP\rfloor+g(\lfloor \frac nP\rfloor)$<br>例题参考<a href="https://www.luogu.com.cn/problem/P4720" target="_blank" rel="noopener">洛谷P4720</a></p>
+<ol>
+<li>卡特兰数 $Cat<em>{0}=1,Cat</em>{1}=1,Cat<em>{n}=\sum</em>{i=0}^{n-1}Cat<em>{i}\times Cat</em>{n-i-1}=\frac{C^{n}<em>{2\times n}}{n+1}=C^{n}</em>{2n}-C_{n-1}^{2n}$</li>
+<li>…待更</li>
+</ol>
+<hr>
+<h3 id="例题部分"><a href="#例题部分" class="headerlink" title="例题部分"></a>例题部分</h3><div id="first"></div>
+
+<h4 id="例一计算系数"><a href="#例一计算系数" class="headerlink" title="例一计算系数"></a>例一<a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=0" target="_blank" rel="noopener">计算系数</a></h4><p>根据二项式定理答案为$C_{k}^{n}\times a^n\times b^m$</p>
+<p>实现方法：预处理阶乘，及其逆元</p>
+<pre><code class="lang-cpp">inline void ginv()
+{
+    inv[0]=1,inv[1]=1;
+    finv[0]=f[0]=1;
+    for(int i=2;i&lt;=p+100;i++) inv[i]=(p-p/i)*inv[p%i]%p;
+    for(int i=1;i&lt;=p+100;i++) f[i]=f[i-1]*i%p,finv[i]=finv[i-1]*inv[i]%p;
+  }
+inline int comb(int n,int m)
+{
+    if(n&gt;m) return 0;
+    return f[m]*finv[n]%p*finv[m-n]%p;
+}
+inline int lucas(int n,int m)
+{
+    if(n&gt;m) return 0;
+    return lucas(n/p,m/p)*comb(n%p,m%p)%p;
+}
+</code></pre>
+<pre><code class="lang-cpp">inline void work()
+{
+    read(a),read(b),read(k),read(n),read(m);
+    ginv();
+    printf(&quot;%lld\n&quot;,qpow(a,n,p)*qpow(b,m,p)%p*lucas(n,k)%p);
+}
+</code></pre>
+<hr>
+<h4 id="例二2-k进制数"><a href="#例二2-k进制数" class="headerlink" title="例二2^k进制数"></a>例二<a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=1" target="_blank" rel="noopener">2^k进制数</a></h4><p>首先考虑$2^k$进制的一位相当于2进制的$k$位<br>那么假如$k\mid r$,我们可以假设成是有$\frac{r}{k}$个$2^k$进制数，显然的，由于$2^k$有$2^k$个基本数码所以我们每次在这$2^k$中随便选$\frac{r}{k}$个就行，然后给他排个序就行了。<br>显然我们可以枚举位数，$i$答案即为$C_{2^k-1}^{i}$</p>
+<p>总的答案即为$\displaystyle \sum <em>{i=0}^{r/k}C</em>{2^k-1}^{i}$</p>
+<p>我们在考虑$k\nmid r$时，我们考虑的只需要考虑$\lfloor \frac{r}{k}\rfloor+1$位的情况就行枚举第一位的数值$1-(2^{r\ mod\ k}-1)$此时答案为$\displaystyle \sum<em>{i=1}^{2^{r\ mod\ k}-1}C^{i}</em>{2^k-1-i}$</p>
+<p>最终答案就为$\displaystyle \sum <em>{i=0}^{r/k}C</em>{2^k-1}^{i}+\displaystyle \sum<em>{i=1}^{2^{r\ mod\ k}-1}C^{i}</em>{2^k-1-i}$</p>
+<p>注意这道题需要高精</p>
+<hr>
+<h4 id="例三-组合"><a href="#例三-组合" class="headerlink" title="例三 组合"></a>例三 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=2" target="_blank" rel="noopener">组合</a></h4><p>本题同<a href="#first">例一</a>模板题</p>
+<hr>
+<h4 id="例四-古代猪文"><a href="#例四-古代猪文" class="headerlink" title="例四 古代猪文"></a>例四 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=3" target="_blank" rel="noopener">古代猪文</a></h4><p>题意实在不好懂。。。<br>大体就是让你求$s=\displaystyle \sum <em>{k\mid n}C</em>{n}^{k}$<br>然后再求$G^s\pmod p,p$为质数<br>由费马小定理$G^s\equiv G^{s\%(p-1)}\pmod p$<br>也就是要求$\displaystyle \sum <em>{k\mid n}C</em>{n}^{k}\%(p-1)$<br>然后你就自闭了，因为(p-1)不是质数，没法求逆元。GG <del>本题无解</del><br>所以我们想一下怎么yy，我们将$q=p-1$分解因数<br>$q=\sum_{i=1}p_i^{\alpha_i}$<br>后面过程极度舒适因为$q=p-1=999911659=2\times3\times4679\times35617$<br>只需每个模数求一般，用$crt$合并就$ok$了</p>
+<hr>
+<h4 id="例五-Bullcow"><a href="#例五-Bullcow" class="headerlink" title="例五 Bullcow"></a>例五 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=4" target="_blank" rel="noopener">Bullcow</a></h4><p>我们考虑一个基本题，当这题没有k的限制，我们考虑总共有$m$只牛，$n$的杜牛，考虑插板在$(m-n)$个牛中找$n$个地方隔开所以答案为$C<em>{m-n}^{n}$<br>回到此题<br>当确定了$i$个杜牛时，其中任意两个中有的牝牛的个数已确定了。<br>所以我们考虑假设此时只有$m-(i-1)\times k$牝牛所以答案为$C</em>{m-(i-1)\times k}^{i}$<br>最终答案为$\displaystyle \sum <em>{i=0}^{\frac{m}{k}+1}C</em>{m-(i-1)\times k}^{i}$<br>暴力硬跑就行</p>
+<hr>
+<h4 id="例六-方程的解数"><a href="#例六-方程的解数" class="headerlink" title="例六 方程的解数"></a>例六 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=5" target="_blank" rel="noopener">方程的解数</a></h4><p>本题我也不知道为什么是组合数学<br>$Meet\ in\ the\ middle$<br>折半搜索<br>具体操作可以，枚举每一个$x<em>i$的值，但肯定是不行的<br>我们考虑优化。<br>我们先考虑$i\in {1,2,…,\lfloor n/2\rfloor},x_i$的取值，求出函数值,保存函数值的个数$num_i$<br>然后枚举$i\in {\lfloor n/2\rfloor+1,\lfloor n/2\rfloor+2,…,n},x_i$的取值，求出函数值,保存函数值的个数$num_i$，假如两组值有互为相反数的$x,-x$,答案应加上$num_x\times num</em>{-x}$<br>完事了，可以用双指针数组，哈希表，map等实现。</p>
+<hr>
+<h4 id="例七-车的放置"><a href="#例七-车的放置" class="headerlink" title="例七 车的放置"></a>例七 <a href="https://loj.ac/problem/10232" target="_blank" rel="noopener">车的放置</a></h4><p>我最讨厌明明可以数学方法切，还要$dp$的。。。<br>这题可以不$dp$</p>
+<h5 id="引理-假如原图是个长方形"><a href="#引理-假如原图是个长方形" class="headerlink" title="引理:假如原图是个长方形"></a>引理:假如原图是个长方形</h5><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1901.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1901.jpg"></a>
+<p>我们设长$n$,宽$m$,$k$个车<br>则答案为$f(n,m,k)=\frac{1}{k}\times\displaystyle \sum_{i=0}^{k-1}(n-i)\times(m-i)$</p>
+<p>我们将一个拐图分成两个长方形图<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1902.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1902.jpg"></a></p>
+<p>然后枚举任意一个长方形里的车的个数，假设右面矮的那个有$i$个车，则左面有$k-i$个车。因为右面一定对左面有影响<br>所以右面答案:$f(c,d,i)$<br>左面答案:$f(a,b+d-i,k-i)$<br>很好理解吧。。。</p>
+<hr>
+<img class="emoji-coda" src="https://cdn.jsdelivr.net/gh/TomoriCoda/hexo-tag-emojis-bycoda/emojis/2233/heshui.png.png">
+<h4 id="例八-数三角形"><a href="#例八-数三角形" class="headerlink" title="例八 数三角形"></a>例八 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=7" target="_blank" rel="noopener">数三角形</a></h4><h5 id="首先还是一个引理"><a href="#首先还是一个引理" class="headerlink" title="首先还是一个引理"></a>首先还是一个引理</h5><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1903.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1903.jpg"></a>
+<p>我们可以发现从$(0,0)$原点到$(x,y)$点的线段经过了$gcd(x,y)+1$个整点(算$(0,0),(x,y)$)</p>
+<h5 id="我们首先不考虑三点共线情况答案是什么？"><a href="#我们首先不考虑三点共线情况答案是什么？" class="headerlink" title="我们首先不考虑三点共线情况答案是什么？"></a>我们首先不考虑三点共线情况答案是什么？</h5><p>当然是 $C_{n\times m}^{3}$</p>
+<h5 id="其次我们考虑平的三点共线"><a href="#其次我们考虑平的三点共线" class="headerlink" title="其次我们考虑平的三点共线"></a>其次我们考虑平的三点共线</h5><p>答案是 $C<em>{n\times m}^{3}-n\times C</em>{m}^{3}-m\times C_{n}^{3}$</p>
+<h5 id="最终我们考虑斜着的三点共线"><a href="#最终我们考虑斜着的三点共线" class="headerlink" title="最终我们考虑斜着的三点共线"></a>最终我们考虑斜着的三点共线</h5><p>好了，终于到正题了<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1904.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1904.jpg"></a><br>我们都知道一个区域中的三角形一定可以平移到<br>该区域原点，如图。<br>所以我们假如他可以三点共线，那么必可以平移到原点，此时我们只要算出整个区域内有多少个这样的三点共线（意思为平移后相同）<br>然后在算出最远点到原点上有几个整数点$-2$（一个是该点，一个是原点），最后刚才两数一乘，答案减去就行了<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1905.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1905.jpg"></a><br>第一个，有多少个这样的三点共线我们发现，假设区域是$(n,m)$,点是$(x,y)$,一共就有$(n-x+1)\times(m-y+1)$个<br>第二个，引理说过应为$gcd(x,y)-1$<br>部分代码</p>
+<pre><code class="lang-cpp">for(int i=1;i&lt;=n;i++)
+{
+    for(int j=1;j&lt;=m;j++)
+        ans-=2*(n-i+1)*(m-j+1)*((gcd(i,j)-1));
+}
+</code></pre>
+<p>为什么有个2。。。因为<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1906.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-1906.jpg"></a></p>
+<p>每一个黑色对应一个红色<br>我在这以前自己做的时候卡了好久。。</p>
+<hr>
+<h4 id="例九-combination"><a href="#例九-combination" class="headerlink" title="例九 combination"></a>例九 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=8" target="_blank" rel="noopener">combination</a></h4><p>同<a href="#first">例一</a></p>
+<hr>
+<h4 id="例十-序列统计"><a href="#例十-序列统计" class="headerlink" title="例十 序列统计"></a>例十 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=9" target="_blank" rel="noopener">序列统计</a></h4><p>假如我们已经确定了序列长$i$<br>那么此时我们求的$a<em>i$单调不减的种类数。<br>这不好求，我们转化为求$b_i=a_i+i$单调增的种类数<br>所以进一步转换为求在$[L-1,(R+i)]$中选$i$个单调不减的数列<br>我们类似前面的先随便选，你给他排序的想法，此时答案为$C</em>{R+i-L}^{i}$<br>总的答案就为$\displaystyle \sum <em>{i=1}^{n}C</em>{R+i-L}^{R-L}$<br>怎么求? 这里给出一种几何$yy$做法<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2001.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2001.jpg"></a></p>
+<p>我们把杨辉三角画出，每个点的值均为其左上，右上的点的权值和。图中红色部分<br>题目所求类似于图中紫色部分，假如我们要求紫色的和，我们先加上一个$F<em>1=C</em>{x}^{0}=1$，此时我们发现可以连锁反应，最后答案积累到点$D<em>2$上而我们知道$M_1$是$C</em>{R-L+n}^{R-L}$,不难发现$D<em>2$是$C</em>{R-L+n+1}^{R-L+1}$<br>最后答案即为$C_{R-L+n+1}^{R-L+1}-1$(别忘了最初先加上的1)</p>
+<hr>
+<h4 id="例十二-超能粒子炮"><a href="#例十二-超能粒子炮" class="headerlink" title="例十二 超能粒子炮"></a>例十二 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=10" target="_blank" rel="noopener">超能粒子炮</a></h4><p>题目大意求$\displaystyle \sum<em>{i=0}^{k}C</em>{n}^{i}\%p,p=2333$<br>设$f(n,k)=\sum<em>{i=0}^{k}C</em>{n}^{i}\%p$<br>由于模数小，首先$lucas$ 一波<br>$f(n,k)=\sum<em>{i=0}^{k}C</em>{n\%p}^{i\%p}\times C<em>{\lfloor n/p\rfloor}^{\lfloor i/p\rfloor}\%p$<br>看到了$i/p$ 我们，再次整除分块一波，就是将$i/p$相同的$i$分在一块里<br>我们得到原式为$f(n,k)=\displaystyle\sum</em>{t=0}^{\lfloor k/p\rfloor-1}\sum<em>{i=0}^{p-1}C^{i}</em>{n\%p}\times C<em>{n/p}^{t}+\sum</em>{i=0}^{k\%p}C<em>{\lfloor n/p\rfloor}^{\lfloor k/p\rfloor}\times C</em>{n\%p}^{i}$<br>整理一下$f(n,k)=\displaystyle\sum<em>{t=0}^{\lfloor k/p\rfloor-1}C</em>{\lfloor n/p\rfloor}^{t}\times \sum<em>{i=0}^{p-1}C^{i}</em>{n\%p}+C<em>{\lfloor n/p\rfloor}^{\lfloor k/p\rfloor}\times\sum</em>{i=0}^{k\%p} C<em>{n\%p}^{i}$<br>设$g(n,k)=\displaystyle\sum</em>{i=0}^{k}C<em>{n}^{i}$<br>现在进行最后一步化简$f(n,k)=f(\lfloor n/p\rfloor,\lfloor k/p\rfloor)\times g(n\%p,p-1)+C</em>{\lfloor n/p\rfloor}^{\lfloor k/p\rfloor}\times g(n\%p,k\%p)$<br>怎么求$g(i,j)?$，和$C_{i}^{j}$一起$O(n^2)$预处理直接求<br>$f(n,k)$直接递归求</p>
+<hr>
+<h4 id="例十三-礼物"><a href="#例十三-礼物" class="headerlink" title="例十三 礼物"></a>例十三 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=11" target="_blank" rel="noopener">礼物</a></h4><p>这题的式子很好想，直接乘法原理<br>记$f(x)=\displaystyle \sum<em>{i=1}^{x}w_i$<br>$\displaystyle\prod </em>{i=1}^{m} C^{w<em>i}</em>{n-f(i-1)}$<br>你慌了，因为这个式子似乎无法化简了。<br>但幸好$m \leq 5$$\times 10^5,O(m)$硬跑就行<br>不妙的是，因为模数不为质数，你无法预处理阶乘的逆元<br>但幸好你会$exlucas$直接就切了。。。 </p>
+<hr>
+<h4 id="例十四-网格"><a href="#例十四-网格" class="headerlink" title="例十四 网格"></a>例十四 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=12" target="_blank" rel="noopener">网格</a></h4><p>当不限制那条斜线时，<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2002.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2002.jpg"></a><br>我们答案就为$C_{n+m}^{n}$意思就为我们一共有$n+m$步，每一步都可能向上，或向右，我们选出有那几步向有，这个走的方法就确定了<br>但是有限制。。。<br>我们构造出所到点的关于那条斜线的对称点，然后，规定假如你第一次碰斜线，那么以后你假如向上，你就必须改为向左，反之亦然。<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2003.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2003.jpg"></a><br>不难证明到对称点的方式与到原终点且经过斜线的方法是一样的，我们只需求出到原终点方法数$-$到对称点的方法数就行了。<br>完了。<br>其实卡特兰数也可以使用这种类似方法给出大体证明，但在另一侧还需要几步生成函数，这里不讲了。</p>
+<hr>
+<h4 id="例十五-有趣的数列"><a href="#例十五-有趣的数列" class="headerlink" title="例十五 有趣的数列"></a>例十五 <a href="http://www.accoders.com/problem.php?cid=2306&amp;pid=13" target="_blank" rel="noopener">有趣的数列</a></h4><p>比较好的一道卡特兰数题<br>$to$找规律的我也无法否定，但是假如题目<del>特别猥琐</del>给你了个带系数的答案，你还怎么找规律了呢?<br>我们首先换一种角度想问题<br>我们是在将$1-2n$按顺序填到数组里，而且每次只能从最靠前的没填过的奇数，偶数位填。我们必须保证任意时刻已填的奇数的个数一定要小于已填的偶数的个数。<br>哦，这不可以类似我们刚才看的<a href>网格</a>那题，该题要求的是向上的步数要在任意时刻小于向左的步数。。。<br>这才是卡特兰数的模板。<br>答案即为$Cat<em>n=\frac{1}{n+1}\times C</em>{2n}^{n}$</p>
+<p>但不要忘了他的模数不保证是质数，所以，嘿嘿嘿。<br>你可以用分解质因数的方法来$O(n\log n)$强势x过去。<br>就是类似</p>
+<pre><code class="lang-cpp">inline void ins(int x)
+{
+  for(register int i=1;i&lt;=tot&amp;&amp;p[i]*p[i]&lt;=x;i++)
+    if(x%p[i]==0)
+    {
+      while(x%p[i]==0) 
+      {
+        if(!vis[x]&amp;&amp;x&lt;=n){vis[x]=1;return ;}
+        x/=p[i],b[i]++;
+      }
+    }
+  if(x&gt;1) b[mp[x]]++;
+}
+inline void del(int x)
+{
+  for(register int i=1;i&lt;=tot&amp;&amp;p[i]*p[i]&lt;=x;i++)
+    if(x%p[i]==0) while(x%p[i]==0) x/=p[i],b[i]--;
+  if(x&gt;1) b[mp[x]]--;
+}
+</code></pre>
+<p><code>ins</code>就是乘上一个数。<br><code>del</code>就是除以一个数。<br>显然是对的。。假如你会初一的单项式乘法，除法法则。。</p>
+<hr>
+<h4 id="例十六-树屋阶梯"><a href="#例十六-树屋阶梯" class="headerlink" title="例十六 树屋阶梯"></a>例十六 <a href="https://loj.ac/problem/10240" target="_blank" rel="noopener">树屋阶梯</a></h4><div id="second"></div>
+
+<p>引理:我们考虑假如是一个$k$阶树屋，那么要用长方形覆盖他，最少也要$k$个。</p>
+<p>怎么证?<br>数归：<a href="#second">引理</a>在$k=1$时成立<br>假设<a href="#second">引理</a>在$k=n$时成立<br>那么在$k=n+1$时答案即为$y<em>k=\min</em>{i=1}^{n}{y<em>i+y</em>{n-i}}+1=i+n-i+1=n+1$<br>故<a href="#second">引理</a>成立。<br>那么我们就考虑切割树屋。<br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2004.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2004.jpg"></a><br><a href="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2005.jpg" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/Sol/2020-03-2005.jpg"></a><br>此时，很明显，类似引理中的$y<em>i$,$Ans_i=\displaystyle\sum</em>{i=0}^{n}Ans<em>i\times Ans</em>{n-i}$<br>明显$Ans<em>i$，就是卡特兰数<br>由于$N\leq500$，我们要高精度求出$Cat_N=C^{N}</em>{2N}-C_{N-1}^{2N}$<br>也是$O(n^2)$求出组合数</p>
+<hr>
+<p>The end</p>
+
+        </div>
+        <!-- .entry-content -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/07/第二类斯特林数·行/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.1/img/thumb-1920-205913.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.1.1/img/thumb-1920-205913.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                第二类斯特林数·行</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/03/05/NOI online t2题解/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/cover/7.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/cover/7.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                NOI online t2题解</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function(){
+        var valine = new Valine();
+        valine.init({
+          el: '#vcomments',
+          appId: "UD9Fgf0gUD8RmiueUxNfhiO6-gzGzoHsz",
+          appKey: "KK3UceJXwviLvXimdcQ3RBJW",
+          visitor: true,
+          path: window.location.pathname,
+          placeholder: "君指先跃动の光は、私の一生不変の信仰に、唯私の超电磁炮永生き！"
+        })
+    }
+  </script>
+  
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/profile/head.jpg" itemprop="image" alt="Protons" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Protons</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+  <script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 proton&#39;s blog<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+      </div>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ctz45562/cdn@1.4.2/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.0.4/js/volantis.min.js"></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "","name":"","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed;right:70px;bottom:65px;">
+    <div class="theme-controls row-container">
+     <ul class="menu-list">
+      <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+      <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+      <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+      <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+      <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+      <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+      <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+      <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+   </div>
+   <canvas id="night-mode-cover"></canvas>
+    
+  <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn"> 
+     <span id="open-skinMenu">
+      <style>
+        span#open-skinMenu{
+            
+          
+          position:fixed;
+          right:60px;
+          bottom:0px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          padding: 10px;
+          width: 230px;
+          height: 50px;
+          background: rgba(236, 180, 250, 0.866);
+            /*color: rgba(255,255,255);*/
+        }
+        
+        </style>
+        切换背景 | SCHEME TOOL  
+       <i class="iconfont icon-gear inline-block rotating"></i> 
+     </span>
+    </div>
+  </div>
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/protons-z/cdn@6.3.0/images/profile/head.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Protons'blogs</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-fort faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-file faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/题解/">
+                  <i class="fa zkq zkq-code" aria-hidden="true"></i>
+                  题解
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/笔记/">
+                  <i class="fa zkq zkq-note" aria-hidden="true"></i>
+                  笔记
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/游记/">
+                  <i class="fa zkq zkq-trip" aria-hidden="true"></i>
+                  游记
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/tags">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-tag faa-vertical" aria-hidden="true"></i>
+            标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-about faa-pulse" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-comment faa-spin" aria-hidden="true"></i>
+            留言
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links">
+          <span class="faa-parent animated-hover">
+            <i class="fa  zkq zkq-youlian" aria-hidden="true"></i>
+            友链
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
