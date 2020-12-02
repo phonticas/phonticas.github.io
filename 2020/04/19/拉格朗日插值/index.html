@@ -352,7 +352,7 @@
 <script type="math/tex; mode=display">F(x)=\sum _{i=0}^{n}y_i\times f_i(x)</script><p>$f_i(x)$满足 $\forall j\not ={i} f_i(x_j)=0$,$f_i(x_i)=1$。<br>所以构造多项式。</p>
 <script type="math/tex; mode=display">f_i(x)=\prod_{j=0,j\not ={i}}^{n}\frac{x-x_j}{x_i-x_j}=\frac{x-x_0}{x_i-x_0}\cdots\frac{x-x_{i-1}}{x_i-x_{i-1}}\frac{x-x_{i+1}}{x_i-x_{i+1}}\cdots \frac{x-x_n}{x_i-x_n}</script><p>分析：</p>
 <ol>
-<li>当 $x=x<em>i$ 时 $f_i(x_i)=\displaystyle\prod</em>{j=0,j\not ={i}}^{n}\frac{x_i-x_j}{x_i-x_j}=\prod 1=1$</li>
+<li>当 $x=x<em>i$, $f_i(x_i)=\displaystyle\prod</em>{j=0,j\not ={i}}^{n}\frac{x_i-x_j}{x_i-x_j}=\prod 1=1$</li>
 <li>当 $x\not =x_i$ 时，设$x=x_k$ 则分子为 $(x_k-x_1)\cdots(x_k-x_k)\cdots (x_k-x_n)=0$ ,$\ \ f_i(x_k)=0$</li>
 </ol>
 <p>ok!<br>就是你啦。</p>
@@ -750,23 +750,8 @@ $(document).ready(function() {
   </ul>
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
-<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
